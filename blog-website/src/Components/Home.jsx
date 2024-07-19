@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const { blogs, isError } = useContext(AppContext);
+  console.log("isError", isError)
 
   if (isError) {
     return (
       <div className="disconnected">
         <img src={disconnected} alt="Something went Wrong" />
-        <h4>{isError}</h4>
+        <h4 className="disconnected-message">Start the Server</h4>
       </div>
     );
   }

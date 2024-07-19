@@ -1,4 +1,3 @@
-// AppProvider.js
 import { createContext, useState, useEffect } from "react";
 import { fetchBlogs, fetchBlogById } from "./api";
 
@@ -6,15 +5,17 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [blogs, setBlogs] = useState([]);
-  const [isError, setError] = useState(null);
+  const [isError, setError] = useState(false);
   const [selectedBlog, setSelectedBlog] = useState(null);
+
   useEffect(() => {
     const fetchBlogsData = async () => {
       try {
         const data = await fetchBlogs();
         setBlogs(data);
+        setError(false);
       } catch (error) {
-        setError(error);
+        setError(true); 
       }
     };
     fetchBlogsData();
@@ -24,13 +25,14 @@ const AppProvider = ({ children }) => {
     try {
       const blog = await fetchBlogById(id);
       setSelectedBlog(blog);
+      setError(false); 
     } catch (error) {
-      setError(error);
+      setError(true); 
     }
   };
 
   return (
-    <AppContext.Provider value={{  blogs, isError, getBlogById, selectedBlog }}>
+    <AppContext.Provider value={{ blogs, isError, getBlogById, selectedBlog }}>
       {children}
     </AppContext.Provider>
   );

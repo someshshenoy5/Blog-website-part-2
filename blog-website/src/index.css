@@ -188,16 +188,26 @@ body{
   }
 }
 .disconnected img{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin: 10px;
   height: 100px;
   width: 100px;
-  margin: 200px;
+  margin: 200px 0 100px 0;
 
 }
-
+.disconnected{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.disconnected-message{
+  /* text-align: center; */
+  color: white;
+  width: fit-content;
+}
 /* <..............................LongArticle.......................> */
 .long-article{
   color: white;

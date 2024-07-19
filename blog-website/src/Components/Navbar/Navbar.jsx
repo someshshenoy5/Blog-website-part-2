@@ -16,7 +16,6 @@ const Navbar = () => {
 
 const handleSearchSubmit = (e) => {
   e.preventDefault();
-  // Handle the search logic here
   console.log("Search Query: ", searchQuery);
 };
   return (

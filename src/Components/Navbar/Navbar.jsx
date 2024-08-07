@@ -27,13 +27,13 @@ const handleSearchSubmit = (e) => {
         </div>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Add Article</a>
+            <a href="/addBlog">Add Article</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="/login">Login</a>
           </li>
           <li>
             <form onSubmit={handleSearchSubmit} className="search-form">
@@ -44,9 +44,9 @@ const handleSearchSubmit = (e) => {
                 onChange={handleSearchChange}
                 className="search-input"
               />
-              <button type="submit" className="search-button">
+              {/* <button type="submit" className="search-button">
                 <img src={searchButton} alt="search" />
-              </button>
+              </button> */}
             </form>
           </li>
         </ul>
@@ -60,13 +60,13 @@ const handleSearchSubmit = (e) => {
         
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Add Article</a>
+            <a href="/addBlog">Add Article</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="/login">Login</a>
           </li>
           <li>
           <form onSubmit={handleSearchSubmit} className="search-form">
@@ -77,9 +77,9 @@ const handleSearchSubmit = (e) => {
                 onChange={handleSearchChange}
                 className="search-input"
               />
-              <button type="submit" className="search-button">
+              {/* <button type="submit" className="search-button">
                 <img src={searchButton} alt="search" />
-              </button>
+              </button> */}
             </form>
           </li>
         </ul>

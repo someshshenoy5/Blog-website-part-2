@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const { blogs, isError } = useContext(AppContext);
-  console.log("isError", isError)
 
   if (isError) {
     return (
